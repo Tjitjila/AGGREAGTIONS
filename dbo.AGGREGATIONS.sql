@@ -40,10 +40,21 @@ from dbo.AGGREGATIONS
 where Parking>=2
 
 --7. How many properties are priced above R3,000,000?
+Select count (*) As No_of_Properties_priced_Above_3M
+from dbo.AGGREGATIONS
+where Property_price>3000000
 
 --8. How many properties are in Gauteng?
+Select COUNT (*) As No_of_Properties_In_Gauteng
+from dbo.AGGREGATIONS
+Where province='Gauteng'
 
 --9. How many properties per province have floor size greater than 200?
+Select (Province)
+
+Count (Property_ID) As No_of_Properties
+from dbo.AGGREGATIONS
+Where floor_size>200
 
 --10. How many distinct provinces are in the table?
 --SECTION 2 – SUM Aggregations (10 Questions)
